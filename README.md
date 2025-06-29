@@ -88,3 +88,50 @@ Use Case Diagrams are powerful tools in software engineering, providing a visual
 Here's a visual representation of the key actors and their interactions with our booking management system.
 
 ![Booking System Use Case Diagram](alx-booking-uc.png)
+
+## Acceptance Criteria
+
+Acceptance Criteria are specific, measurable, and verifiable conditions that a software feature must meet to be considered complete and functional by stakeholders. They're basically a checklist that confirms whether a requirement has been successfully implemented from the user's perspective. Think of them as the "Done" criteria for each piece of functionality, ensuring that what's built actually satisfies the defined need.
+
+### Importance of Acceptance Criteria in Requirement Analysis:
+
+* **Clear Definition of "Done":** They eliminate ambiguity, providing a precise understanding of when a feature is truly finished and meets expectations. This prevents scope creep and endless revisions.
+* **Improved Communication:** Acceptance criteria serve as a common language between business stakeholders, developers, and testers. Everyone knows exactly what needs to be delivered and how it will be validated.
+* **Facilitates Testing:** They directly inform the creation of test cases, making the testing process more efficient and effective. If a test passes the acceptance criteria, the feature is good to go.
+* **Reduced Rework:** By specifying expected behavior upfront, they help catch misunderstandings or misinterpretations of requirements early in the development cycle, significantly reducing costly rework later on.
+* **Enhances User Satisfaction:** Ensuring that features meet explicit user expectations directly leads to a product that users find useful and satisfying.
+
+### Example Acceptance Criteria for the Checkout Feature:
+
+Here’s what we’d expect for the "Checkout" functionality in our booking management system:
+
+**Feature:** Customer initiates and completes a hotel booking payment.
+
+**Scenario 1: Successful Payment via Credit Card**
+* **Given** the customer has selected a room and valid dates, and proceeded to the checkout page.
+* **When** the customer enters valid credit card details and clicks "Pay Now".
+* **Then** the system should display a "Payment Successful" message.
+* **And** a booking confirmation email should be sent to the customer within 60 seconds.
+* **And** the hotel manager should receive a notification about the new booking.
+* **And** the room's availability for the booked dates should be updated in the system.
+* **And** the customer should be redirected to a "Booking Confirmed" page showing their booking details.
+
+**Scenario 2: Insufficient Funds / Payment Failure**
+* **Given** the customer has proceeded to the checkout page.
+* **When** the customer attempts to pay with an invalid or declined credit card.
+* **Then** the system should display an "Payment Failed: Insufficient Funds" (or similar error) message on the checkout page.
+* **And** the customer should remain on the checkout page with the option to retry payment or cancel.
+* **And** no booking should be created or confirmed.
+
+**Scenario 3: User Navigates Away from Payment Page**
+* **Given** the customer has proceeded to the checkout page.
+* **When** the customer closes the browser tab or navigates away before completing payment.
+* **Then** the system should not create a booking.
+* **And** the room availability should remain unchanged.
+* **And** no payment should be processed.
+
+**Scenario 4: Validating Required Payment Information**
+* **Given** the customer is on the checkout page.
+* **When** the customer clicks "Pay Now" without filling in all mandatory payment fields (e.g., card number, expiry, CVV).
+* **Then** the system should display a distinct error message for each missing required field.
+* **And** the "Pay Now" button should remain disabled until all required fields are correctly filled.
