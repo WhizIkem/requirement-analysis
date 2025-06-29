@@ -70,3 +70,21 @@ These define the quality attributes of the system. They specify *how* the system
 * **Disaster Recovery:** The system must have a robust backup and recovery plan to restore data and services in case of a catastrophic failure.
 * **Interoperability:** The system must seamlessly integrate with third-party services like payment gateways (e.g., for processing payments) and potentially external mapping services.
 * **Efficiency (Resource Usage):** The system should optimize resource consumption (CPU, memory, database queries) to minimize operational costs while maintaining performance. Caching mechanisms (like Redis) should be used to reduce database load.
+
+## Use Case Diagrams
+
+Use Case Diagrams are powerful tools in software engineering, providing a visual summary of the functionality of a system. They illustrate what a system does by showing the relationships between actors (users or external systems) and use cases (specific functions or goals within the system). Think of them as a high-level map that outlines who interacts with the system and what they can achieve.
+
+**Benefits of Use Case Diagrams:**
+
+* **Clear Overview:** They offer a simplified, easy-to-understand view of system functionality from the user's perspective.
+* **Stakeholder Communication:** Excellent for communicating with non-technical stakeholders, ensuring everyone understands the scope and behavior of the system.
+* **Requirement Elicitation:** Help identify and define system boundaries, primary functionalities, and different user roles.
+* **Basis for Test Cases:** Each use case can directly inform the creation of test scenarios, ensuring all functionalities are thoroughly validated.
+* **Early Problem Detection:** Highlighting interactions and potential complexities early in the design phase.
+
+### Use Case Diagram for the Booking Management System
+
+Here's a visual representation of the key actors and their interactions with our booking management system.
+
+![Booking System Use Case Diagram](assets/alx-booking-uc.png)
